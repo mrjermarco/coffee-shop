@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
 import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
@@ -29,5 +29,6 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}
 
