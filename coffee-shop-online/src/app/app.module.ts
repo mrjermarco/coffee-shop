@@ -1,21 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { RouterModule, Routes } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
 import { UserLoginPageComponent } from './user-login-page/user-login-page.component';
+import { RegisterUserPageComponent } from './register-user-page/register-user-page.component';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'user-login', component: UserLoginPageComponent },
+  { path: 'register-user', component: RegisterUserPageComponent }
+];
 
 
-const routes:Routes=[
-  { path:'register', component:RegisterUserPageComponent},
-  { path:'user-login', component:UserLoginPageComponent }
-]
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterUserPageComponent,
-    UserLoginPageComponent
+    UserLoginPageComponent,
+    RegisterUserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,3 +27,4 @@ const routes:Routes=[
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
